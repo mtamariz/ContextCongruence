@@ -1,6 +1,10 @@
 a <- read.csv("DATA_SEPT22", sep = "\t")
 str(a)
 
+t <-  table(a$Produced_0_Expert_1_Peer)
+
+chisq.test(t)         # chi square of number of times expert's and peer's variants were produced
+
 t <-  table(a$TransmissionContext_0_ExpertNovice_1_PeerPeer, a$Produced_0_Expert_1_Peer)
 
 chisq.test(c(t[1],t[3]))  # chi square of expert's and peer's variants transmitted in the expert-to novice onward transmission context
