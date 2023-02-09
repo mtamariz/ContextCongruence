@@ -12,7 +12,7 @@ chisq.test(c(t[1],t[3]))  # chi square of expert's and peer's variants transmitt
 chisq.test(c(t[2],t[4]))  # chi square of expert's and peer's variants transmitted in the peer-to-peer onward transmission context (Hypothesis 2b)
 
 
-# Control variables: 
+# Checking for other effects: 
 chisq.test(table(a$Variant_0_Parity_1_Skipping))   # No significant difference between the number of times Parity and Skipping variants were produced.
 
 chisq.test(table(a$InputOrder_0_ExpertFirst_1_PeerFrist,a$Produced_0_Expert_1_Peer))  # The transmitted variant (Expert's or Peer's) was not associated with the order of learning contexts (first from an Expert or first from a Peer
